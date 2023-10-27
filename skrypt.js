@@ -1,25 +1,51 @@
-const container = document.querySelector('.slider_container');
-const elements = document.querySelectorAll('.slider_element');
-const elementWidth = elements[0].offsetWidth;
-const animationSpeed = 2000; // Czas trwania animacji w milisekundach
-const interval = 300; // Interwał między przesunięciami w milisekundach
+// JavaScript (skrypt.js)
+const textElement = document.getElementById("powitanie");
+const originalText = textElement.innerText;
+textElement.innerText = ''; 
 
 let currentIndex = 0;
 
-function moveSlider() {
-    container.style.transition = `none`;
-    currentIndex++;
-
-    if (currentIndex >= elements.length) {
-        container.style.transform = `translateX(0)`;
-        currentIndex = 1;
+function animateText() {
+  if (currentIndex < originalText.length) {
+    if (originalText[currentIndex] === ' ') {
+      textElement.innerHTML += '&nbsp;'; 
     } else {
-        container.style.transform = `translateX(-${elementWidth * currentIndex}px)`;
+      textElement.innerText += originalText[currentIndex];
     }
-
-    setTimeout(() => {
-        container.style.transition = `transform ${animationSpeed}ms ease-in-out`;
-    }, 10);
+    currentIndex++;
+    setTimeout(animateText, 100); 
+  }
 }
 
-setInterval(moveSlider, interval);
+animateText();
+
+
+
+window.addEventListener("load", function () {
+    const sliderElements = document.querySelectorAll(".slider_element");
+    let currentIndex = 0;
+  
+    function showNextElement() {
+      if (currentIndex < sliderElements.length) {
+        sliderElements[currentIndex].classList.remove("active");
+        currentIndex = (currentIndex + 1) % sliderElements.length;
+        sliderElements[currentIndex].classList.add("active");
+        setTimeout(hideCurrentElement, 4000);
+      }
+    }
+  
+    function hideCurrentElement() {
+      if (currentIndex > 0) {
+        sliderElements[currentIndex - 1].classList.add("fadeOut");
+        setTimeout(() => {
+          sliderElements[currentIndex - 1].classList.remove("active", "fadeOut");
+        }, 3000); 
+      }
+  
+      setTimeout(showNextElement, 4000);
+    }
+  
+    sliderElements[currentIndex].classList.add("active");
+    setTimeout(showNextElement, 6000);
+  });
+  

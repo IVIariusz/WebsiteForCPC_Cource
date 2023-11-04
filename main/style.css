@@ -1,0 +1,78 @@
+h1 span, h2 span {
+    color: red
+}
+
+h1 {
+    font-size: 40px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+#hello {
+    text-align: center;
+    width: 50%;
+    padding: 20px;
+    margin: auto
+}
+
+h2 {
+    font-size: 20px;
+}
+
+.slider_container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .slider_element {
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    display: none;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .active {
+    opacity: 1;
+    display: block;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .fadeOut {
+    animation: fadeOut 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .section {
+    padding: 20px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+
+.text {
+    font-size: 16px;
+    line-height: 1.6;
+}

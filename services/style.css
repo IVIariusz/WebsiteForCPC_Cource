@@ -1,0 +1,29 @@
+table {
+    margin: 50px 5% 25px 30px;
+    width: 90%;
+    border: 2px solid #303030;
+    border-collapse: collapse;
+    text-align: center;
+    justify-content: center;
+    table-layout: auto;
+    flex-direction: column;
+}
+tbody {
+    background-color: aquamarine;
+}
+
+thead {
+    background-color: #10570d;
+    font-size:  22px;
+    font-weight:bold;
+    font-style: normal;
+}
+
+tbody tr {
+    border-bottom: #303030 solid 2px;
+}
+
+th,td {
+    padding: 5px 10px;
+    text-align: center;
+}

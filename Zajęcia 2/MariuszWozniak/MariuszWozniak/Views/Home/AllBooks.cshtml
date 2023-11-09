@@ -1,0 +1,31 @@
+﻿@model IEnumerable<book>
+@{
+    ViewData["Title"] = "Menu";
+}
+
+<h1>Dostępne ksiązki</h1>
+<table style="text-align: center">
+    <thded>
+        <tr>
+            <th>ID</th>
+            <th>Nazwa</th>
+            <th>Cena</th>
+            <th>Zdjęcie</th>
+            <th></th>
+            <th></th>                                                                                               
+            <th></th>
+        </tr>
+    </thded>
+    <tbody>
+        @foreach(var a in Model)
+        {
+            <tr>
+                <td>@a.ID</td>
+                <td>@a.Name</td>
+                <td>@a.Price</td>
+                <td><img src="~/images/@a.Image" style="height: 12rem; width: 9rem" /></td>
+                <td>@Html.ActionLink("Szczegóły", "BookDetails", new {id = a.ID})</td>
+            </tr>
+        }
+    </tbody>
+</table>

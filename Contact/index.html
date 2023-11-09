@@ -18,10 +18,34 @@
         </ul>
     </nav>
     <section class="section">
-        <h1>Lorem Ipsum</h1>
+        <h1>Skontaktuj się z nami!</h1>
         <p class="text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget urna sit amet orci congue laoreet. Sed hendrerit odio eu urna facilisis, a tincidunt dolor bibendum. Maecenas volutpat auctor tellus, at volutpat arcu venenatis sit amet.
+
+            Masz pytania, sugestie, czy potrzebujesz pomocy dotyczącej naszych produktów lub usług? Jesteśmy tutaj, aby Ci pomóc! Skorzystaj z poniższego formularza kontaktowego, aby wysłać do nas wiadomość. Możesz również zadzwonić do nas bezpośrednio pod numer 000000000 lub wysłać e-mail na adres powiadomienia@gmail.com. Nasz zespół obsługi klienta dołoży wszelkich starań, aby odpowiedzieć na Twoje zapytanie jak najszybciej. Cenimy każdy kontakt i gwarantujemy indywidualne podejście do Twoich potrzeb.
+
         </p>
     </section>
+
+    <div class="form-container">
+        <h2>Formularz Zgłoszeniowy</h2>
+        <form action="/submit_form" method="post">
+          <div class="form-group">
+            <label for="name">Imię i nazwisko:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Adres e-mail:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Wiadomość:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <div class="form-group">
+            <input type="submit" value="Wyślij">
+          </div>
+        </form>
+      </div>
+      
 </body>
 </html>

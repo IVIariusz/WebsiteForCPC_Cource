@@ -19,3 +19,33 @@
     font-size: 16px;
     line-height: 1.6;
 }
+
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.testimonial {
+    background-color: white;
+    border-left: 5px solid #007bff; /* Blue border on the left for emphasis */
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+    max-width: 600px; /* Adjust based on your layout */
+}
+
+.testimonial p {
+    margin: 0;
+    color: #333; /* Dark text color for readability */
+    font-size: 1rem; /* Adjust font size as needed */
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .testimonials {
+        flex-direction: column;
+    }
+}
